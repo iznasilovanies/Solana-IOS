@@ -1,0 +1,270 @@
+"AppName" = "Nicegram";
+
+"ViewAuditReport" = "CertiK 보고서 보기";
+"Wallet" = "지갑";
+
+/*Common*/
+"Nicegram.PrivacyPolicy" = "개인 정보 보호정책";
+"Nicegram.EULA" = "EULA";
+
+/*ChatFilter*/
+"ChatFilter.Bots" = "봇";
+"ChatFilter.Channels" = "채널";
+"ChatFilter.Private" = "사용자";
+"ChatFilter.Groups" = "그룹";
+"ChatFilter.Unread" = "읽지 않음";
+"ChatFilter.Unmuted" = "음소거 해제";
+"ChatFilter.Favourites" = "즐겨찾기";
+
+/*Nice Features*/
+"NiceFeatures.Title" = "Nicegram";
+"NiceFeatures.Tabs.Header" = "탭";
+"NiceFeatures.Tabs.ShowCalls" = "통화 탭 표시";
+"NiceFeatures.Tabs.ShowContacts" = "연락처 탭 보이기";
+"NiceFeatures.ChatScreen.Header" = "채팅 화면";
+"NiceFeatures.ChatScreen.AnimatedStickers" = "움직이는 스티커";
+"NiceFeatures.useBackCam" = "후면 카메라 사용 (라운드 비디오)";
+"NiceFeatures.Other" = "기타";
+
+"NiceFeatures.Folders.Header" = "폴더";
+"NiceFeatures.Account.Header" = "프라이버시 설정";
+"NiceFeatures.Folders.TgFolders" = "폴더를 하단에 표시";
+"NiceFeatures.Folders.TgFolders.Notice" = "iOS 스타일 폴더 목록";
+
+"NiceFeatures.RoundVideos.Header" = "라운드 비디오";
+"NiceFeatures.RoundVideos.UseRearCamera" = "후면 카메라로 시작";
+
+"NiceFeatures.InstantLock" = "즉시";
+
+/*Save to Cloud*/
+"Chat.SaveToCloud" = "저장";
+
+/*Open Pin*/
+"Chat.OpenPin" = "핀 표시";
+"ChatFilter.Admin" = "관리자";
+"NiceFeatures.Notifications.Fix" = "원치 않는 알림 비활성화";
+"NiceFeatures.Filters.Header" = "필터 (탭)";
+"NiceFeatures.Filters.ShowBadge" = "배지 표시 (필터)";
+"NiceFeatures.UseClassicInfoUi" = "기본 채팅 정보 UI 사용";
+
+/*Common*/
+"Common.ExitNow" = "지금 종료";
+"Common.Later" = "나중에";
+"Common.RestartRequired" = "재시작 필요!";
+"NiceFeatures.Tabs.ShowNames" = "탭 이름 표시";
+"Chat.ForwardAsCopy" = "복사본으로 전달";
+
+/*Folder*/
+"Folder.DefaultName" = "폴더";
+"Folder.New" = "새 폴더";
+"Folder.Created" = "폴더가 생성되었습니다.";
+"Folder.AddToExisting" = "기존 폴더에 추가";
+"Folder.Updated" = "폴더 업데이트됨";
+"Folder.Create" = "폴더 생성";
+"Folder.Create.Name" = "폴더 이름";
+"Folder.Create.Placeholder" = "폴더...";
+"NiceFeatures.HideNumber" = "설정에서 전화번호 숨기기";
+
+/*NGWeb*/
+"NGWeb.Blocked" = "AppStore 지침으로 인해 Nicegram 에서 사용할 수 없음";
+
+/*Browser*/
+/*Please, Go to «Data & Storage» to configure default browser*/
+"NiceFeatures.Use.DataStorage" = "%1 을 사용하여 기본 브라우저를 설정 하세요";
+"NiceFeatures.Browser.Header" = "URL 주소";
+"NiceFeatures.Browser.UseBrowser" = "브라우저에서 링크 열기";
+"NiceFeatures.Browser.UseBrowserNotice" = "인앱 브라우저 대신 외부 브라우저에서 링크를 엽니다. 선택한 브라우저는 설치되어 있어야 합니다.";
+"ChatFilter.Missed" = "부재중";
+
+/*Premium*/
+"Premium.Title" = "프리미엄";
+"Premium.UnlimitedPins.Header" = "채팅창 무제한 고정";
+"Premium.SyncPins" = "고정 된 채팅 동기화";
+"Premium.SyncPins.Notice.ON" = "다른 장치에서 고정 된 채팅을 변경하면, Nicegram 에서도 변경됩니다.";
+"Premium.SyncPins.Notice.OFF" = "다른 장치에서 고정 된 채팅을 변경하여도, Nicegram 에서는 변경되지 않습니다.";
+"Premium.Missed.Header" = "부재중 메세지";
+"Premium.Missed" = "부재중 메시지 알림";
+"Premium.Missed.Notice" = "장시간 지연 후 (수면, 공부 등) 앱을 열면, Nicegram 이 읽지 않은 개인 메시지 및 멘션에 대해 알려줍니다.";
+"Folder.DeleteAsk" = "폴더 삭제";
+"Folder.NeedPremium" = "이 폴더는 프리미엄 에서만 사용할 수 있습니다. 옆으로 밀어서 프리미엄을 받거나 폴더를 삭제할 수 있습니다.";
+"Common.SupportChatUsername" = "nicegramchat";
+"Common.FAQUrl" = "https://nicegram.app/faq/";
+"Common.FAQ.Button" = "Nicegram FAQ";
+"IAP.Premium.Title" = "프리미엄";
+"IAP.Premium.Subtitle" = "지나칠 수 없는 독특한 기능!";
+"IAP.Premium.Activated" = "프리미엄 활성화!";
+"IAP.Common.Restore" = "구매 복원";
+"IAP.Common.CantPay" = "죄송합니다. 기기 또는 계정 제한으로 인해 구매할 수 없습니다.";
+"IAP.Common.ErrorFetch" = "죄송합니다. 앱 스토어 구매를 가져올 수 없습니다.";
+"IAP.Common.Congrats" = "축하합니다!";
+"IAP.Common.ValidateError" = "죄송합니다. 구매를 확인할 수 없습니다.";
+"IAP.Common.Connecting" = "앱스토어에 연결 중...";
+"Premium.OnetapTranslate" = "빠른 번역 버튼";
+"Premium.IgnoreTranslate.Title" = "제외한 언어";
+"Premium.IgnoreTranslate.Header" = "아래에서 선택한 언어는 빠른 번역 버튼이 비활성화 됩니다.";
+"Premium.RecordAllCalls" = "모든 통화 녹음";
+
+/*Manage Filters*/
+"ManageFilters.Title" = "탭 관리";
+"ManageFilters.Header" = "사용 가능한 필터 구성";
+
+"Messages.Translate" = "번역";
+"Messages.UndoTranslate" = "번역 취소";
+"Messages.TranslateError" = "죄송합니다. 번역 할 수 없습니다.";
+"Messages.SelectAllFromUser" = "이 사용자에게서 온 모든 메시지 선택 
+
+";
+"Messages.ToLanguage" = "언어";
+"Messages.ToLanguage.WithCode" = "언어: %@";
+"Messages.TranslateError.ToLanguageNotFound" = "텍스트를 번역할 언어를 결정할 수 없습니다. 수동으로 선택하고 다시 시도하십시오.";
+"Messages.ReplyPrivately" = "비공개로 답장";
+"Messages.DeleteAllSystemMessages" = "모두 삭제";
+
+/*NG Lab Registration Date*/
+"NGLab.RegDate.Btn" = "가입 날짜 확인";
+"NGLab.RegDate.Title" = "가입 날짜";
+"NGLab.RegDate.Notice" = "대략적인 날짜입니다";
+"NGLab.RegDate.MenuItem" = "등록됨";
+"NGLab.RegDate.FetchError" = "죄송합니다. 가입일을 확인할 수 없습니다.";
+"NGLab.BadDeviceToken" = "[iOS 11+] 장치를 확인할 수 없습니다.";
+
+/*Backup Settings*/
+"NiceFeatures.BackupIcloud" = "iCloud 에 설정 및 폴더 동기화";
+"NiceFeatures.BackupSettings" = "백업 설정 및 폴더";
+"NiceFeatures.BackupSettings.Notice" = "백업 파일을 생성합니다. 복원 할 파일을 탭하세요.";
+"NiceFeatures.BackupSettings.Done" = "저장된 메시지로 백업 전송";
+"NiceFeatures.BackupSettings.Error" = "백업 생성 중 오류가 발생했습니다.";
+
+"NiceFeatures.RestoreSettings.Done" = "폴더 및 설정이 성공적으로 복원되었습니다";
+"NiceFeatures.RestoreSettings.Error" = "설정을 복원하는 중에 오류가 발생했습니다. 파일이 손상되었을 수 있습니다";
+
+/*Preview Mode*/
+"Gmod.Restricted" = "미리보기 모드에서는 메시지를 보낼 수 없습니다.";
+"Gmod.Unavailable" = "미리보기 모드를 사용할 수 없음";
+"Gmod.Disable.Notice" = "마지막 접속 시간이 %1 로 설정 됩니다";
+"Gmod" = "미리보기 모드";
+"Gmod.Enable" = "미리보기 모드를 사용 하시겠습니까?";
+"Gmod.Disable" = "미리보기를 사용 중지 하시겠습니까?";
+
+"ShowNicegramButtonInChat" = "채팅에서 Nicegram 버튼 보이기";
+"ShowAIShortcutsInChat" = "채팅에서 AI 바로가기 표시";
+"SendWithKb" = "«입력»버튼으로 보내기";
+"NiceFeatures.ShowGmodIcon" = "미리보기 모드 아이콘 표시";
+"Gmod.OpenChatQ" = "대화방 열기";
+"Gmod.OpenChatNotice" = "채팅은 \"읽음\"으로 표시되지만 길게 탭 (강제 터치)하여 채팅을 미리 볼 수 있습니다.";
+"Gmod.OpenChatBtn" = "예, 채팅창을 엽니다.";
+"Gmod.DisableBtn" = "경고 비활성화";
+
+"NicegramSettings.Other.hidePhoneInSettingsNotice" = "전화 번호는 UI에서만 숨겨집니다. 다른 사람에게 숨기려면 개인 정보 설정을 사용하세요.";
+"NicegramSettings.Other.showProfileId" = "프로필 ID 표시";
+"NicegramSettings.Other.showRegDate" = "가입 날짜 표시";
+"NicegramSettings.Unblock.Header" = "차단 해제";
+"NicegramSettings.Unblock.Button" = "차단해제 안내";
+"NicegramSettings.Other.hideReactions" = "반응 숨기기";
+"NicegramSettings.Other.hideReactionsToYourMessages" = "메시지에 대한 반응 숨기기";
+"NicegramSettings.RoundVideos.DownloadVideos" = "사진앨범으로 동영상 다운로드";
+"Premium.OnetapTranslate.UseIgnoreLanguages" = "언어 무시하기";
+"Premium.OnetapTranslate.UseIgnoreLanguages.Note" = "앱은 기기에서 각 메시지의 언어를 감지합니다. 배터리 수명에 영향을 줄 수 있는 고성능 작업입니다.";
+"Premium.rememberFolderOnExit" = "종료시 현재 폴더 기억하기";
+"NicegramSettings.HideStories" = "스토리 숨기기";
+"NicegramSettings.HideBadgeCounters" = "반응 알림 숨기기";
+"NicegramSettings.HideUnreadCounters" = "읽지 않은 카운터 숨기기";
+"NicegramSettings.HideMentionNotification" = "언급 알림 숨기기";
+"NicegramSettings.EnableAnimationsInChatList" = "채팅 목록의 애니메이션";
+"NicegramSettings.EnableGrayscaleAll" = "전체 화면 흑백";
+"NicegramSettings.EnableGrayscaleInChatList" = "채팅 목록의 그레이스케일";
+"NicegramSettings.EnableGrayscaleInChat" = "채팅에서의 그레이스케일";
+"NicegramSettings.EnableAppleSpeech2Text" = "Apple Speech2Text 활성화";
+"NicegramSettings.ShowKeywords" = "키워드 폴더 보기";
+
+/*Registration Date*/
+"NiceFeatures.RegDate.OlderThan" = "이전의";
+"NiceFeatures.RegDate.Approximately" = "대략";
+"NiceFeatures.RegDate.NewerThan" = "보다 새로운";
+
+/*Quick Replies*/
+"NiceFeatures.QuickReplies" = "빠른 답장";
+"NiceFeatures.QuickReplies.Description" = "아래 버튼을 사용하여 답장을 무제한으로 추가할 수 있습니다. 빠른 답장을 사용하려면 메시지 입력 필드에 **기호 \"&\"**를 입력하십시오.";
+"NiceFeatures.QuickReplies.AddNew" = "새로 추가";
+"NiceFeatures.QuickReplies.Placeholder" = "내용 입력";
+
+/*Telegram Premium*/
+"TelegramPremium.Description" = "안타깝게도 Nicegram 앱에 로그인한 상태에서는 Telegram 프리미엄 기능을 이용할 수 없습니다. 공식 Telegram 앱으로 이동하여 Telegram 프리미엄에 가입하십시오. Nicegram으로 돌아오면 모든 프리미엄 기능을 사용할 수 있습니다.";
+
+/*Double Bottom*/
+"DoubleBottom.Title" = "Double bottom";
+"DoubleBottom.Description" = "이 기능을 활성화하려면 계정이 한 개 이상 필요하며 암호 잠금으로 전환해야 합니다(설정→개인정보 및 보안→암호 잠금 이동).";
+"DoubleBottom.Enabled.Title" = "Double Bottom 활성화되었습니다";
+"DoubleBottom.Enabled.Description" = "방금 설정한 암호를 기억해두고 Double Bottom 정상 작동할 수 있도록 앱을 다시 시작하세요";
+"DoubleBottom.Enabled.OK" = "확인";
+"DoubleBottom.Passcode.Error" = "비밀번호 잠금에 사용하는 비밀번호와 다른 비밀번호를 설정하세요.";
+
+/*Rounded Videos*/
+"RoundedVideos.ButtonTitle" = "둥근 비디오로 보내기";
+"RoundedVideos.MoreButtonTooltip" = "한 번의 탭으로 정사각형 비디오를 원형으로 변환하여 보내기.";
+"RoundedVideos.SendButtonTooltip" = "길게 눌러 스타일리시한 원형으로 비디오를 보내세요.";
+
+/*Speech to text*/
+"SpeechToText.UseOpenAi" = "OpenAI 음성에서 텍스트로";
+"SpeechToText.Toast" = "OpenAI 음성에서 텍스트로 기술을 더 빠르고 좋게 이용하려면 [Nicegram Premium에 가입하세요]()!";
+
+/*Confirm Call*/
+"ConfirmCall.Desc" = "전화를 걸겠습니까?";
+
+/*Hidden Chats*/
+"ChatContextMenu.Hide" = "숨기기";
+"ChatContextMenu.Unhide" = "숨김 해제";
+"HiddenChatsTooltip" = "이 버튼을 길게 누르면 숨겨진 비밀 채팅이 표시됩니다";
+
+/*Data Sharing*/
+"NicegramSettings.ShareBotsToggle" = "봇 정보 공유하기";
+"NicegramSettings.ShareChannelsToggle" = "채널 정보 공유";
+"NicegramSettings.ShareStickersToggle" = "스티커 정보 공유하기";
+"NicegramSettings.ShareData.Note" = "자동으로 채널 정보와 링크를 제출함으로써 Telegram 채널과 그룹들의 가장 포괄적인 위키백과에 기여하세요. 우리는 여러분의 Telegram 프로필과 채널을 연결하거나 개인 데이터를 공유하지 않습니다.";
+
+/*Call Record*/
+"NicegramCallRecord.Record" = "녹음";
+"NicegramCallRecord.Stop" = "중지";
+"NicegramCallRecord.StopAlertTitle" = "녹음 중지";
+"NicegramCallRecord.StopAlertDescription" = "이 통화 녹음을 중지하시겠습니까?";
+"NicegramCallRecord.StopAlertButtonStop" = "중지";
+"NicegramCallRecord.StopAlertButtonCancel" = "Cancel";
+
+/*Feed*/
+"NicegramFeed.Title" = "피드";
+"NicegramFeed.Add" = "피드에 추가";
+"NicegramFeed.Remove" = "피드에서 제거";
+
+/*SpeechToText*/
+"NicegramSpeechToText.Language.Title" = "Speеch-2-Text";
+"NicegramSpeechToText.Language.Whisper" = "⚠️ 정확도를 높이기 위해 음성 메시지의 언어를 선택하거나, [Whisper를 활성화](https://my.nicegram.app/)하여 수월한 자동 인식을 사용하세요";
+"NicegramSpeechToText.Language.Choose" = "인식할 언어 선택";
+"NicegramSpeechToText.SelectLanguage" = "언어 선택";
+"NicegramSpeechToText.NotAvailable" = "음성 인식이 현재 사용할 수 없습니다";
+"NicegramSpeechToText.AuthorisationError" = "권한 설정으로 인해 음성 인식을 사용할 수 없습니다. 기기 설정 → 개인정보 및 보안 → 음성 인식에서 Nicegram에 대한 액세스를 허용하세요";
+
+/*Stars Purchase*/
+"StarsPurchase.GetStars" = "별 얻기 (멀티체인 및 KYC 불필요)";
+"StarsPurchase.GetOnFragment" = "Fragment에서 구입";
+"StarsPurchase.GetOnTelegram" = "Telegram에서 구입";
+
+/*Spy On Friends*/
+"SpyOnFriends.Title" = "활동";
+
+/*God’s Eye*/
+"GodsEye.Title" = "God’s Eye";
+
+/*Keywords*/
+"NicegramKeywords.Title" = "✨키워드✨";
+"NicegramKeywords.TitleNoEmoji" = "키워드";
+"NicegramKeywords.Tooltip" = "특정 키워드에 대한 수신 메시지 모니터링";
+"NicegramKeywords.TrackUpdates" = "\"%@\" 업데이트 추적";
+"NicegramKeywords.TrackEnabled" = "\"%@\" 업데이트에 대한 추적이 활성화되었습니다!";
+
+/*Accounts Backup*/
+"AccountsBackup.SectionHeader" = "계정";
+"AccountsBackup.ICloudBackupEnabled" = "iCloud 백업";
+"AccountsBackup.ImportFromICloud" = "iCloud에서 가져오기";
+"AccountsBackup.ImportFromFile" = "파일에서 가져오기";
+"AccountsBackup.ExportAsFile" = "파일로 내보내기";
+"AccountsBackup.DeleteSessions" = "세션 삭제";

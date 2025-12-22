@@ -1,0 +1,268 @@
+"AppName" = "Nicegram";
+
+"ViewAuditReport" = "查看CertiK報告";
+"Wallet" = "錢包";
+
+/*Common*/
+"Nicegram.PrivacyPolicy" = "隱私權政策";
+"Nicegram.EULA" = "授權條款";
+
+/*ChatFilter*/
+"ChatFilter.Bots" = "機器人";
+"ChatFilter.Channels" = "頻道";
+"ChatFilter.Private" = "用戶";
+"ChatFilter.Groups" = "群組";
+"ChatFilter.Unread" = "未讀訊息";
+"ChatFilter.Unmuted" = "開啟通知";
+"ChatFilter.Favourites" = "常用";
+
+/*Nice Features*/
+"NiceFeatures.Title" = "Nicegram";
+"NiceFeatures.Tabs.Header" = "標籤";
+"NiceFeatures.Tabs.ShowCalls" = "顯示通話標籤";
+"NiceFeatures.Tabs.ShowContacts" = "顯示聯絡人標籤";
+"NiceFeatures.ChatScreen.Header" = "對話介面";
+"NiceFeatures.ChatScreen.AnimatedStickers" = "動態貼圖";
+"NiceFeatures.useBackCam" = "使用後置鏡頭 (圓形影片)";
+"NiceFeatures.Other" = "其他";
+
+"NiceFeatures.Folders.Header" = "資料夾";
+"NiceFeatures.Account.Header" = "隱私設定";
+"NiceFeatures.Folders.TgFolders" = "底部資料夾";
+"NiceFeatures.Folders.TgFolders.Notice" = "iOS 風格資料夾列表";
+
+"NiceFeatures.RoundVideos.Header" = "圓形影片";
+"NiceFeatures.RoundVideos.UseRearCamera" = "開啟後置鏡頭";
+
+"NiceFeatures.InstantLock" = "立即";
+
+/*Save to Cloud*/
+"Chat.SaveToCloud" = "儲存";
+
+/*Open Pin*/
+"Chat.OpenPin" = "顯示置頂";
+"ChatFilter.Admin" = "管理員";
+"NiceFeatures.Notifications.Fix" = "停用非必要通知";
+"NiceFeatures.Filters.Header" = "篩選標籤";
+"NiceFeatures.Filters.ShowBadge" = "顯示標記 (小紅點)";
+"NiceFeatures.UseClassicInfoUi" = "使用經典版介面";
+
+/*Common*/
+"Common.ExitNow" = "立即結束";
+"Common.Later" = "稍後";
+"Common.RestartRequired" = "必須重新啟動";
+"NiceFeatures.Tabs.ShowNames" = "顯示篩選標籤名稱";
+"Chat.ForwardAsCopy" = "複製後轉傳";
+
+/*Folder*/
+"Folder.DefaultName" = "資料夾";
+"Folder.New" = "新資料夾";
+"Folder.Created" = "已建立資料夾";
+"Folder.AddToExisting" = "新增至現有資料夾";
+"Folder.Updated" = "資料夾已更新";
+"Folder.Create" = "建立資料夾…";
+"Folder.Create.Name" = "資料夾名稱";
+"Folder.Create.Placeholder" = "資料夾…";
+"NiceFeatures.HideNumber" = "在設定中隱藏電話號碼";
+
+/*NGWeb*/
+"NGWeb.Blocked" = "由於 App Store 審核指南，在 Nicegram 中不可用";
+
+/*Browser*/
+/*Please, Go to «Data & Storage» to configure default browser*/
+"NiceFeatures.Use.DataStorage" = "請使用 «%1» 設定預設瀏覽器";
+"NiceFeatures.Browser.Header" = "連結";
+"NiceFeatures.Browser.UseBrowser" = "在瀏覽器中開啟連結";
+"NiceFeatures.Browser.UseBrowserNotice" = "Nicegram 將在外部瀏覽器開啟連結而不是在 App 內開啟，必須安裝所選擇的瀏覽器。";
+"ChatFilter.Missed" = "錯過的訊息";
+
+/*Premium*/
+"Premium.Title" = "進階版功能";
+"Premium.UnlimitedPins.Header" = "無限置頂";
+"Premium.SyncPins" = "同步置頂對話";
+"Premium.SyncPins.Notice.ON" = "如果您在其他客戶端中變更置頂對話，它們在 Nicegram 中將會同步。";
+"Premium.SyncPins.Notice.OFF" = "不如果您在其他客戶端中變更置頂對話，它們在 Nicegram 中將不會同步。";
+"Premium.Missed.Header" = "錯過的訊息";
+"Premium.Missed" = "錯過的訊息通知";
+"Premium.Missed.Notice" = "長時間未上線後開啟 App 時，Nicegram 會通知您未讀的對話及 TAG";
+"Folder.DeleteAsk" = "刪除資料夾";
+"Folder.NeedPremium" = "這個資料夾是進階版功能。您可以透過刷卡來升級，或是刪除一些對話夾。";
+"Common.SupportChatUsername" = "nicegram_tw";
+"Common.FAQUrl" = "https://nicegram-tw.gitbook.io/";
+"Common.FAQ.Button" = "Nicegram 常見問題";
+"IAP.Premium.Title" = "進階版功能";
+"IAP.Premium.Subtitle" = "您無法抗拒的獨特功能！";
+"IAP.Premium.Activated" = "已升級進階版！";
+"IAP.Common.Restore" = "恢復購買";
+"IAP.Common.CantPay" = "抱歉，由於您的設備或帳戶限制，您無法購買。";
+"IAP.Common.ErrorFetch" = "抱歉，無法取得 App Store 購買的商品。";
+"IAP.Common.Congrats" = "恭喜！";
+"IAP.Common.ValidateError" = "很抱歉，無法驗證您的購買。";
+"IAP.Common.Connecting" = "正在連接到 AppStore...";
+"Premium.OnetapTranslate" = "快速翻譯按鈕";
+"Premium.IgnoreTranslate.Title" = "忽略的語言";
+"Premium.IgnoreTranslate.Header" = "對於以下選擇的語言，「快速翻譯」按鈕將被停用。";
+"Premium.RecordAllCalls" = "錄製所有通話";
+
+/*Manage Filters*/
+"ManageFilters.Title" = "管理標籤";
+"ManageFilters.Header" = "設定過濾器";
+
+"Messages.Translate" = "翻譯";
+"Messages.UndoTranslate" = "取消翻譯";
+"Messages.TranslateError" = "抱歉，無法翻譯。";
+"Messages.SelectAllFromUser" = "選取來自這個人的所有訊息";
+"Messages.ToLanguage" = "翻譯為";
+"Messages.ToLanguage.WithCode" = "翻譯為：%@";
+"Messages.TranslateError.ToLanguageNotFound" = "我們無法確定您希望翻譯成何種語言，請手動選擇並再試一次。";
+"Messages.ReplyPrivately" = "私下回覆";
+"Messages.DeleteAllSystemMessages" = "刪除全部";
+
+/*NG Lab Registration Date*/
+"NGLab.RegDate.Btn" = "取得註冊日期";
+"NGLab.RegDate.Title" = "註冊日期";
+"NGLab.RegDate.Notice" = "這是一個大概的日期";
+"NGLab.RegDate.MenuItem" = "已註冊";
+"NGLab.RegDate.FetchError" = "抱歉，無法取得註冊日期。";
+"NGLab.BadDeviceToken" = "抱歉，無法驗證裝置！";
+
+/*Backup Settings*/
+"NiceFeatures.BackupIcloud" = "從 iCloud 同步設定與資料夾";
+"NiceFeatures.BackupSettings" = "備份設定與資料夾";
+"NiceFeatures.BackupSettings.Notice" = "建立備份檔，點擊檔案開始還原。";
+"NiceFeatures.BackupSettings.Done" = "備份已儲存";
+"NiceFeatures.BackupSettings.Error" = "建立備份檔時發生錯誤";
+
+"NiceFeatures.RestoreSettings.Done" = "已成功還原「文件夾與設定」";
+"NiceFeatures.RestoreSettings.Error" = "恢復設定錯誤，備份檔可能已損壞";
+
+/*Preview Mode*/
+"Gmod.Restricted" = "您無法在預覽模式下傳送訊息";
+"Gmod.Unavailable" = "預覽模式無法使用";
+"Gmod.Disable.Notice" = "您的「線上狀態」設定將變更為 «%1»";
+"Gmod" = "預覽模式";
+"Gmod.Enable" = "啟用預覽模式？";
+"Gmod.Disable" = "停用預覽模式？";
+
+"ShowNicegramButtonInChat" = "在聊天中顯示 Nicegram 按鈕";
+"ShowAIShortcutsInChat" = "在聊天中顯示AI快捷方式";
+"SendWithKb" = "點擊 «Enter» 傳送";
+"NiceFeatures.ShowGmodIcon" = "顯示預覽模式圖示";
+"Gmod.OpenChatQ" = "開啟對話？";
+"Gmod.OpenChatNotice" = "對話將被標記為「已讀」，但您可以長按來預覽聊天。";
+"Gmod.OpenChatBtn" = "是的，打開對話";
+"Gmod.DisableBtn" = "停用警告";
+
+"NicegramSettings.Other.hidePhoneInSettingsNotice" = "您的電話號碼只會在介面中隱藏。要完全隱藏起來，請使用「隱私設定」。";
+"NicegramSettings.Other.showProfileId" = "顯示用戶ID";
+"NicegramSettings.Other.showRegDate" = "顯示用戶註冊日期";
+"NicegramSettings.Unblock.Header" = "解鎖";
+"NicegramSettings.Unblock.Button" = "解鎖指南";
+"NicegramSettings.Other.hideReactions" = "隱藏心情回應";
+"NicegramSettings.Other.hideReactionsToYourMessages" = "隱藏對您消息的反應";
+"NicegramSettings.RoundVideos.DownloadVideos" = "將影片下載至圖片庫";
+"Premium.OnetapTranslate.UseIgnoreLanguages" = "忽略語言";
+"Premium.OnetapTranslate.UseIgnoreLanguages.Note" = "App 會檢測您設備上每則訊息的語言。這是一項高耗電的功能，會影響您的電池壽命。";
+"Premium.rememberFolderOnExit" = "記下應用程式關閉時所在的資料夾";
+"NicegramSettings.HideStories" = "隱藏故事";
+"NicegramSettings.HideBadgeCounters" = "隱藏反應通知";
+"NicegramSettings.HideUnreadCounters" = "隱藏未讀計數器";
+"NicegramSettings.HideMentionNotification" = "隱藏提及通知";
+"NicegramSettings.EnableAnimationsInChatList" = "聊天列表中的動畫";
+"NicegramSettings.EnableGrayscaleAll" = "全螢幕灰階";
+"NicegramSettings.EnableGrayscaleInChatList" = "聊天列表中的灰階";
+"NicegramSettings.EnableGrayscaleInChat" = "灰階在聊天中";
+"NicegramSettings.EnableAppleSpeech2Text" = "啟用Apple Speech2Text";
+"NicegramSettings.ShowKeywords" = "顯示關鍵詞資料夾";
+
+/*Registration Date*/
+"NiceFeatures.RegDate.OlderThan" = "早於";
+"NiceFeatures.RegDate.Approximately" = "大約";
+"NiceFeatures.RegDate.NewerThan" = "晚於";
+
+/*Quick Replies*/
+"NiceFeatures.QuickReplies" = "快速回覆";
+"NiceFeatures.QuickReplies.Description" = "您可以使用下面的按鈕新增無限數量的回覆。如要使用快速回覆，請在訊息輸入欄中輸入**符號「&」**。";
+"NiceFeatures.QuickReplies.AddNew" = "新增";
+"NiceFeatures.QuickReplies.Placeholder" = "輸入文字";
+
+/*Telegram Premium*/
+"TelegramPremium.Description" = "遺憾的是，當您登錄到Nicegram應用程序時，您無法獲得Telegram Premium功能。請前往官方的Telegram應用程序並訂閱Telegram Premium。當您返回Nicegram時，所有Premium功能都將可供使用。";
+
+/*Double Bottom*/
+"DoubleBottom.Title" = "Double Bottom";
+"DoubleBottom.Description" = "要啟用此功能，您必須擁有一個以上的帳號並啟用密碼鎖 (前往設定→隱私與安全→密碼鎖)";
+"DoubleBottom.Enabled.Title" = "Double Bottom 已啟用";
+"DoubleBottom.Enabled.Description" = "為了使 Double Bottom正常運作，請記住您剛才設定的密碼並重新開啟應用程式";
+"DoubleBottom.Enabled.OK" = "好";
+"DoubleBottom.Passcode.Error" = "請設定另一個與你的密碼鎖不同的密碼。";
+
+/*Rounded Videos*/
+"RoundedVideos.ButtonTitle" = "以圓形影片發送";
+"RoundedVideos.MoreButtonTooltip" = "一鍵將方形影片轉換為圓形發送。";
+"RoundedVideos.SendButtonTooltip" = "長按以將您的影片以時尚圓形發送。";
+
+/*Speech to text*/
+"SpeechToText.UseOpenAi" = "OpenAI 語音轉文字";
+"SpeechToText.Toast" = "[訂閱 Nicegram Premium]() 以獲得更快更好的 OpenAI 語音轉文字技術！";
+
+/*Confirm Call*/
+"ConfirmCall.Desc" = "您確定要撥打電話嗎？";
+
+/*Hidden Chats*/
+"ChatContextMenu.Hide" = "隱藏";
+"ChatContextMenu.Unhide" = "取消隱藏";
+"HiddenChatsTooltip" = "按住此按鈕可顯示隱藏的秘密聊天";
+
+/*Data Sharing*/
+"NicegramSettings.ShareBotsToggle" = "分享機器人資訊";
+"NicegramSettings.ShareChannelsToggle" = "分享頻道信息";
+"NicegramSettings.ShareStickersToggle" = "分享貼圖資訊";
+"NicegramSettings.ShareData.Note" = "通過自動提交頻道資訊和連結到我們的數據庫，貢獻給最全面的Telegram頻道和群組維基百科。我們不會連接您的Telegram個人檔案和頻道，也不會分享您的個人資料。";
+
+/*Call Record*/
+"NicegramCallRecord.Record" = "記錄";
+"NicegramCallRecord.Stop" = "停止";
+"NicegramCallRecord.StopAlertTitle" = "停止錄音";
+"NicegramCallRecord.StopAlertDescription" = "您想停止錄製這個通話嗎？";
+"NicegramCallRecord.StopAlertButtonStop" = "停止";
+"NicegramCallRecord.StopAlertButtonCancel" = "取消";
+
+/*Feed*/
+"NicegramFeed.Title" = "動態";
+"NicegramFeed.Add" = "添加到訂閱源";
+"NicegramFeed.Remove" = "從訂閱源中移除";
+
+/*SpeechToText*/
+"NicegramSpeechToText.Language.Title" = "Speеch-2-Text";
+"NicegramSpeechToText.Language.Whisper" = "⚠️ 選擇您語音消息的語言以提高準確性，或[啟動 Whisper](https://my.nicegram.app/) 以輕鬆自動識別";
+"NicegramSpeechToText.Language.Choose" = "選擇識別語言";
+"NicegramSpeechToText.SelectLanguage" = "選擇語言";
+"NicegramSpeechToText.NotAvailable" = "語音轉文字識別目前不可用";
+"NicegramSpeechToText.AuthorisationError" = "由於權限設置，語音轉文字不可用。在設備設置中允許 Nicegram 訪問 → 隱私和安全 → 語音識別";
+
+/*Stars Purchase*/
+"StarsPurchase.GetStars" = "獲取星星（多鏈且無需KYC）";
+"StarsPurchase.GetOnFragment" = "購買於 Fragment";
+"StarsPurchase.GetOnTelegram" = "購買於 Telegram";
+
+/*Spy On Friends*/
+"SpyOnFriends.Title" = "活動";
+
+/*God’s Eye*/
+"GodsEye.Title" = "God's Eye";
+
+/*Keywords*/
+"NicegramKeywords.Title" = "✨關鍵詞✨";
+"NicegramKeywords.TitleNoEmoji" = "關鍵詞";
+"NicegramKeywords.Tooltip" = "監控包含特定關鍵詞的傳入訊息";
+"NicegramKeywords.TrackUpdates" = "跟蹤“%@”的更新";
+"NicegramKeywords.TrackEnabled" = "已啟用對“%@”更新的跟蹤！";
+
+/*Accounts Backup*/
+"AccountsBackup.SectionHeader" = "帳戶";
+"AccountsBackup.ICloudBackupEnabled" = "iCloud 備份";
+"AccountsBackup.ImportFromICloud" = "從 iCloud 導入";
+"AccountsBackup.ImportFromFile" = "從文件導入";
+"AccountsBackup.ExportAsFile" = "導出為文件";
+"AccountsBackup.DeleteSessions" = "刪除會話";

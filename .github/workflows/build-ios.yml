@@ -1,0 +1,126 @@
+name: Build Solana iOS
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_15.4.app/Contents/Developer
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 120
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Cache Bazel
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/bazel-cache
+          ~/.cache/bazel
+        key: bazel-${{ runner.os }}-${{ hashFiles('**/BUILD', '**/WORKSPACE') }}
+        restore-keys: |
+          bazel-${{ runner.os }}-
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+        brew install bazelisk
+
+    - name: Check Xcode version
+      run: |
+        xcodebuild -version
+        xcode-select -p
+
+    - name: Create build configuration
+      run: |
+        cat > build-config.json << 'EOF'
+        {
+          "bundle_id": "com.solana.telegram",
+          "api_id": "${{ secrets.TELEGRAM_API_ID }}",
+          "api_hash": "${{ secrets.TELEGRAM_API_HASH }}",
+          "app_center_id": "",
+          "is_internal_build": false,
+          "is_appstore_build": false,
+          "appstore_id": "",
+          "app_specific_url_scheme": "solana",
+          "premium_iap_product_id": "",
+          "enable_siri": false,
+          "enable_icloud": false,
+          "team_id": "${{ secrets.APPLE_TEAM_ID }}",
+          "development_provisioning_profile_name": "",
+          "distribution_provisioning_profile_name": ""
+        }
+        EOF
+
+    - name: Generate Xcode project
+      run: |
+        python3 build-system/Make/Make.py \
+          --cacheDir="$HOME/bazel-cache" \
+          generateProject \
+          --configurationPath=build-config.json \
+          --xcodeManagedCodesigning \
+          --disableProvisioningProfiles
+
+    - name: Build for simulator (unsigned)
+      run: |
+        python3 build-system/Make/Make.py \
+          --cacheDir="$HOME/bazel-cache" \
+          build \
+          --configurationPath=build-config.json \
+          --buildNumber=${{ github.run_number }} \
+          --configuration=debug_arm64 \
+          --disableProvisioningProfiles
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: Solana-iOS-Build-${{ github.run_number }}
+        path: |
+          build/artifacts/*.app
+          build/artifacts/*.ipa
+        retention-days: 30
+        if-no-files-found: warn
+
+    - name: Create Release
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: build/artifacts/*.ipa
+        tag_name: v1.0.${{ github.run_number }}
+        name: Solana iOS v1.0.${{ github.run_number }}
+        body: |
+          ## Solana iOS Build
+          
+          - Build number: ${{ github.run_number }}
+          - Commit: ${{ github.sha }}
+          
+          ### Features
+          - Ghost Mode
+          - Anti-Read Receipts
+          - Deleted Messages History
+          - Local Premium
+          - Custom Themes
+          
+          ### Installation
+          1. Download the IPA file
+          2. Install via AltStore or Sideloadly
+        draft: false
+        prerelease: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

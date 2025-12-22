@@ -1,0 +1,268 @@
+"AppName" = "Nicegram";
+
+"ViewAuditReport" = "Zobacz raport CertiK";
+"Wallet" = "Portfel";
+
+/*Common*/
+"Nicegram.PrivacyPolicy" = "Privacy policy ml";
+"Nicegram.EULA" = "EULA";
+
+/*ChatFilter*/
+"ChatFilter.Bots" = "Bot";
+"ChatFilter.Channels" = "Kanały";
+"ChatFilter.Private" = "Użytk";
+"ChatFilter.Groups" = "Grupy";
+"ChatFilter.Unread" = "Nieprzeczyt";
+"ChatFilter.Unmuted" = "Wyłącz. pow.";
+"ChatFilter.Favourites" = "Ulubione";
+
+/*Nice Features*/
+"NiceFeatures.Title" = "Nicegram";
+"NiceFeatures.Tabs.Header" = "ZAKŁADKI";
+"NiceFeatures.Tabs.ShowCalls" = "Pokaż Kartę Połączeń";
+"NiceFeatures.Tabs.ShowContacts" = "Pokaż zakładkę kontakty";
+"NiceFeatures.ChatScreen.Header" = "Ekran czatu";
+"NiceFeatures.ChatScreen.AnimatedStickers" = "Animowane naklejki";
+"NiceFeatures.useBackCam" = "Użyj tylnej kamery (okrągłe wideo)";
+"NiceFeatures.Other" = "Inne";
+
+"NiceFeatures.Folders.Header" = "FOLDERY";
+"NiceFeatures.Account.Header" = "Ustawienia prywatności";
+"NiceFeatures.Folders.TgFolders" = "Foldery na dole";
+"NiceFeatures.Folders.TgFolders.Notice" = "Lista folderów w stylu iOS";
+
+"NiceFeatures.RoundVideos.Header" = "OKRĄGŁE WIDEO";
+"NiceFeatures.RoundVideos.UseRearCamera" = "Uruchom z tylną kamerą";
+
+"NiceFeatures.InstantLock" = "Natychmiast";
+
+/*Save to Cloud*/
+"Chat.SaveToCloud" = "Zapisz";
+
+/*Open Pin*/
+"Chat.OpenPin" = "Pokaż przypiętą";
+"ChatFilter.Admin" = "Administrator";
+"NiceFeatures.Notifications.Fix" = "Wyłącz niechciane powiadomienia";
+"NiceFeatures.Filters.Header" = "FILTRY (ZAKŁADKI)";
+"NiceFeatures.Filters.ShowBadge" = "Pokaż plakietki (filtry)";
+"NiceFeatures.UseClassicInfoUi" = "Użyj klasycznego wyglądu Informacji o czacie";
+
+/*Common*/
+"Common.ExitNow" = "Wyjdź teraz";
+"Common.Later" = "Później";
+"Common.RestartRequired" = "Wymagane ponowne uruchomienie!";
+"NiceFeatures.Tabs.ShowNames" = "Pokaż nazwy zakładek";
+"Chat.ForwardAsCopy" = "Przekaż jako kopię";
+
+/*Folder*/
+"Folder.DefaultName" = "Folder";
+"Folder.New" = "Nowy folder";
+"Folder.Created" = "Utworzono folder";
+"Folder.AddToExisting" = "Dodaj do istniejącego folderu";
+"Folder.Updated" = "Folder zaktualizowany";
+"Folder.Create" = "Utwórz folder...";
+"Folder.Create.Name" = "Nazwa folderu";
+"Folder.Create.Placeholder" = "Folder...";
+"NiceFeatures.HideNumber" = "Ukryj numer telefonu w ustawieniach";
+
+/*NGWeb*/
+"NGWeb.Blocked" = "Niedostępne w Nicegram ze względu na wytyczne AppStore";
+
+/*Browser*/
+/*Please, Go to «Data & Storage» to configure default browser*/
+"NiceFeatures.Use.DataStorage" = "Użyj «%1», aby skonfigurować domyślną przeglądarkę";
+"NiceFeatures.Browser.Header" = "URL";
+"NiceFeatures.Browser.UseBrowser" = "Otwórz linki w przeglądarce";
+"NiceFeatures.Browser.UseBrowserNotice" = "Nicegram otworzy linki w zewnętrznej przeglądarce zamiast w aplikacji. Wybrana przeglądarka musi być zainstalowana.";
+"ChatFilter.Missed" = "Nieodebrane";
+
+/*Premium*/
+"Premium.Title" = "Premium";
+"Premium.UnlimitedPins.Header" = "NIELIMITOWANA LICZBA PRZYPIĘTYCH CZATÓW";
+"Premium.SyncPins" = "Synchronizuj przypięte czaty";
+"Premium.SyncPins.Notice.ON" = "Jeśli zmienisz przypięte czaty w innym kliencie, ZMIENIĄ SIĘ one też w Nicegram.";
+"Premium.SyncPins.Notice.OFF" = "Jeśli zmienisz przypięte czaty w innym kliencie, NIE ZMIENIĄ SIĘ one w Nicegram.";
+"Premium.Missed.Header" = "Nieodebrane wiadomości";
+"Premium.Missed" = "Powiadom o nieodebranych wiadomościach";
+"Premium.Missed.Notice" = "Gdy otworzysz aplikację po długim czasie (spanie, nauka itp.), Nicegram powiadomi cię o nieprzeczytanych wiadomościach prywatnych i wzmiankach.";
+"Folder.DeleteAsk" = "Usuń folder";
+"Folder.NeedPremium" = "Ten folder jest dostępny tylko w wersji Premium. Możesz pobrać wersję Premium lub usunąć folder za pomocą przesunięcia.";
+"Common.SupportChatUsername" = "nicegramchat";
+"Common.FAQUrl" = "https://nicegram.app/faq/";
+"Common.FAQ.Button" = "Nicegram FAQ";
+"IAP.Premium.Title" = "Premium";
+"IAP.Premium.Subtitle" = "Unikalne funkcje, których nie można odmówić!";
+"IAP.Premium.Activated" = "Aktywowano wersję Premium!";
+"IAP.Common.Restore" = "Odtwórz zakupione";
+"IAP.Common.CantPay" = "Nie możesz dokonywać zakupów z powodu ograniczeń dotyczących twojego urządzenia lub konta.";
+"IAP.Common.ErrorFetch" = "Nie mogę odebrać zakupów w App Store.";
+"IAP.Common.Congrats" = "Gratulacje!";
+"IAP.Common.ValidateError" = "Nie można zweryfikować twojego zakupu.";
+"IAP.Common.Connecting" = "Łączenie z AppStore…";
+"Premium.OnetapTranslate" = "Przycisk Szybkie tłumaczenie";
+"Premium.IgnoreTranslate.Title" = "Ignorowane języki";
+"Premium.IgnoreTranslate.Header" = "Przycisk „Szybkie tłumaczenie” zostanie WYŁĄCZONY dla języków, które wybierzesz poniżej.";
+"Premium.RecordAllCalls" = "Nagrywaj wszystkie rozmowy";
+
+/*Manage Filters*/
+"ManageFilters.Title" = "Zarządzaj zakładkami";
+"ManageFilters.Header" = "SKONFIGURUJ DOSTĘPNE FILTRY";
+
+"Messages.Translate" = "Tłumacz";
+"Messages.UndoTranslate" = "Cofnij tłumaczenie";
+"Messages.TranslateError" = "Tłumaczenie niedostępne.";
+"Messages.SelectAllFromUser" = "Zaznacz wszystkie od tego użytkownika";
+"Messages.ToLanguage" = "Na język";
+"Messages.ToLanguage.WithCode" = "Na język: %@";
+"Messages.TranslateError.ToLanguageNotFound" = "Nie byliśmy w stanie określić języka, na który chcesz przetłumaczyć tekst. Proszę wybrać go ręcznie i spróbować ponownie.";
+"Messages.ReplyPrivately" = "Odpowiedz prywatnie";
+"Messages.DeleteAllSystemMessages" = "Usuń wszystkie";
+
+/*NG Lab Registration Date*/
+"NGLab.RegDate.Btn" = "Uzyskaj datę rejestracji";
+"NGLab.RegDate.Title" = "Data rejestracji";
+"NGLab.RegDate.Notice" = "To jest przybliżona data";
+"NGLab.RegDate.MenuItem" = "zarejestrowano";
+"NGLab.RegDate.FetchError" = "Nie można uzyskać daty rejestracji.";
+"NGLab.BadDeviceToken" = "[iOS 11+] Nie można zweryfikować urządzenia.";
+
+/*Backup Settings*/
+"NiceFeatures.BackupIcloud" = "Synchronizuj ustawienia i foldery z iCloud";
+"NiceFeatures.BackupSettings" = "Kopia zapasowa ustawień i folderów";
+"NiceFeatures.BackupSettings.Notice" = "Tworzy plik kopii zapasowej. Stuknij plik, aby przywrócić.";
+"NiceFeatures.BackupSettings.Done" = "Kopia zapasowa została wysłana do Zapisanych wiadomości";
+"NiceFeatures.BackupSettings.Error" = "Błąd tworzenia kopii zapasowej.";
+
+"NiceFeatures.RestoreSettings.Done" = "Foldery i ustawienia zostały pomyślnie przywrócone";
+"NiceFeatures.RestoreSettings.Error" = "Błąd podczas przywracania ustawień. Plik może być uszkodzony";
+
+/*Preview Mode*/
+"Gmod.Restricted" = "Nie możesz wysyłać wiadomości w trybie Podglądu.";
+"Gmod.Unavailable" = "Tryb Podglądu niedostępny";
+"Gmod.Disable.Notice" = "Twój status ostatniej widoczności zostanie ustawiony na «%1»";
+"Gmod" = "Tryb Podglądu";
+"Gmod.Enable" = "Włączyć tryb Podglądu?";
+"Gmod.Disable" = "Wyłączyć tryb Podglądu?";
+
+"ShowNicegramButtonInChat" = "Pokaż przycisk Nicegram w czacie";
+"ShowAIShortcutsInChat" = "Pokaż skróty AI w czacie";
+"SendWithKb" = "Wyślij za pomocą przycisku «Enter»";
+"NiceFeatures.ShowGmodIcon" = "Pokaż ikonę trybu Podglądu";
+"Gmod.OpenChatQ" = "Otworzyć czat?";
+"Gmod.OpenChatNotice" = "Czat zostanie oznaczony jako „przeczytany”, ale możesz wyświetlić podgląd czatu długim naciśnięciem (force-touch)";
+"Gmod.OpenChatBtn" = "Tak, otwórz czat";
+"Gmod.DisableBtn" = "Wyłącz ostrzeżenia";
+
+"NicegramSettings.Other.hidePhoneInSettingsNotice" = "Twój numer zostanie ukryty tylko w interfejsie użytkownika. Aby ukryć go przed innymi, użyj ustawień prywatności.";
+"NicegramSettings.Other.showProfileId" = "Pokaż ID";
+"NicegramSettings.Other.showRegDate" = "Pokaż datę rejestracji";
+"NicegramSettings.Unblock.Header" = "Odblokuj";
+"NicegramSettings.Unblock.Button" = "Odblokuj przewodnik";
+"NicegramSettings.Other.hideReactions" = "Ukryj reakcje";
+"NicegramSettings.Other.hideReactionsToYourMessages" = "Ukryj reakcje na twoje wiadomości";
+"NicegramSettings.RoundVideos.DownloadVideos" = "Pobierz filmy do galerii";
+"Premium.OnetapTranslate.UseIgnoreLanguages" = "Ignorowane języki";
+"Premium.OnetapTranslate.UseIgnoreLanguages.Note" = "Aplikacja wykrywa język każdej wiadomości na urządzeniu. Jest to zadanie o wysokim stopniu zaawansowania, które może mieć wpływ na żywotność baterii.";
+"Premium.rememberFolderOnExit" = "Zapamiętaj bieżący folder przy wyjściu";
+"NicegramSettings.HideStories" = "Ukryj Historie";
+"NicegramSettings.HideBadgeCounters" = "Ukryj powiadomienia o reakcjach";
+"NicegramSettings.HideUnreadCounters" = "Ukryj liczniki nieprzeczytanych";
+"NicegramSettings.HideMentionNotification" = "Ukryj powiadomienia o wzmiankach";
+"NicegramSettings.EnableAnimationsInChatList" = "Animacje na liście czatów";
+"NicegramSettings.EnableGrayscaleAll" = "Pełnoekranowy skala szarości";
+"NicegramSettings.EnableGrayscaleInChatList" = "Skala szarości na liście czatów";
+"NicegramSettings.EnableGrayscaleInChat" = "Skala szarości w czacie";
+"NicegramSettings.EnableAppleSpeech2Text" = "Włącz Apple Speech2Text";
+"NicegramSettings.ShowKeywords" = "Pokaż folder dla słów kluczowych";
+
+/*Registration Date*/
+"NiceFeatures.RegDate.OlderThan" = "Starsze niż";
+"NiceFeatures.RegDate.Approximately" = "W przybliżeniu";
+"NiceFeatures.RegDate.NewerThan" = "Nowsze niż";
+
+/*Quick Replies*/
+"NiceFeatures.QuickReplies" = "Szybkie odpowiedzi";
+"NiceFeatures.QuickReplies.Description" = "Możesz dodać nieograniczoną liczbę odpowiedzi, korzystając z przycisku poniżej. Aby skorzystać z szybkiej odpowiedzi, wpisz w polu wprowadzania wiadomości **symbol \"&\"**.";
+"NiceFeatures.QuickReplies.AddNew" = "Dodaj nowy";
+"NiceFeatures.QuickReplies.Placeholder" = "Wpisz tekst";
+
+/*Telegram Premium*/
+"TelegramPremium.Description" = "Niestety, nie możesz uzyskać funkcji premium Telegrama, będąc zalogowanym do aplikacji Nicegram. Proszę przejdź do oficjalnej aplikacji Telegram i zasubskrybuj Telegram Premium. Gdy wrócisz do Nicegram, wszystkie funkcje Premium będą dostępne do użytku.";
+
+/*Double Bottom*/
+"DoubleBottom.Title" = "Double bottom";
+"DoubleBottom.Description" = "Aby włączyć tę funkcję, musisz mieć więcej niż jedno konto i włączyć blokadę kodem dostępu (przejdź do Ustawienia → Prywatność i bezpieczeństwo → Blokada kodem dostępu)";
+"DoubleBottom.Enabled.Title" = "Double Bottom jest włączony";
+"DoubleBottom.Enabled.Description" = "Pamiętaj hasło, które właśnie ustawiłeś i zrestartuj aplikację, aby Double Dół działał poprawnie";
+"DoubleBottom.Enabled.OK" = "OK";
+"DoubleBottom.Passcode.Error" = "Proszę ustaw inny kod dostępu, różny od tego, którego używasz do blokady kodem dostępu";
+
+/*Rounded Videos*/
+"RoundedVideos.ButtonTitle" = "Wyślij jako zaokrąglone wideo";
+"RoundedVideos.MoreButtonTooltip" = "Przekształć kwadratowe wideo w koła jednym dotknięciem.";
+"RoundedVideos.SendButtonTooltip" = "Przytrzymaj, aby wysłać swoje wideo jako stylowy krąg.";
+
+/*Speech to text*/
+"SpeechToText.UseOpenAi" = "OpenAI Przemowa na Tekst";
+"SpeechToText.Toast" = "Zasubskrybuj Nicegram Premium dla szybszych i lepszych technologii OpenAI Przemowa na Tekst!";
+
+/*Confirm Call*/
+"ConfirmCall.Desc" = "Czy jesteś pewien, że chcesz zadzwonić?";
+
+/*Hidden Chats*/
+"ChatContextMenu.Hide" = "Ukryj";
+"ChatContextMenu.Unhide" = "Odkryj";
+"HiddenChatsTooltip" = "Naciśnij i przytrzymaj ten przycisk, aby wyświetlić ukryte tajne czaty";
+
+/*Data Sharing*/
+"NicegramSettings.ShareBotsToggle" = "Udostępnij informacje o botach";
+"NicegramSettings.ShareChannelsToggle" = "Udostępnij informacje o kanale";
+"NicegramSettings.ShareStickersToggle" = "Udostępnij informacje o naklejkach";
+"NicegramSettings.ShareData.Note" = "Przyczyn się do najbardziej kompleksowej wikipedii kanałów i grup Telegrama, automatycznie przesyłając informacje o kanale i link do naszej bazy danych. Nie łączymy Twojego profilu na Telegramie z kanałem i nie udostępniamy Twoich danych osobowych.";
+
+/*Call Record*/
+"NicegramCallRecord.Record" = "Nagraj";
+"NicegramCallRecord.Stop" = "Zatrzymaj";
+"NicegramCallRecord.StopAlertTitle" = "Zatrzymaj nagrywanie";
+"NicegramCallRecord.StopAlertDescription" = "Czy chcesz zatrzymać nagrywanie tego połączenia?";
+"NicegramCallRecord.StopAlertButtonStop" = "Zatrzymaj";
+"NicegramCallRecord.StopAlertButtonCancel" = "Anuluj";
+
+/*Feed*/
+"NicegramFeed.Title" = "Kanał";
+"NicegramFeed.Add" = "Dodaj do kanału";
+"NicegramFeed.Remove" = "Usuń z kanału";
+
+/*SpeechToText*/
+"NicegramSpeechToText.Language.Title" = "Speеch-2-Text";
+"NicegramSpeechToText.Language.Whisper" = "⚠️ Wybierz język swojej wiadomości głosowej, aby zwiększyć dokładność, lub [aktywuj Whisper](https://my.nicegram.app/) dla bezproblemowego automatycznego rozpoznawania";
+"NicegramSpeechToText.Language.Choose" = "Wybierz język do rozpoznania";
+"NicegramSpeechToText.SelectLanguage" = "Wybierz język";
+"NicegramSpeechToText.NotAvailable" = "Rozpoznawanie mowy na tekst jest obecnie niedostępne";
+"NicegramSpeechToText.AuthorisationError" = "Rozpoznawanie mowy na tekst jest niedostępne z powodu ustawień uprawnień. Zezwól na dostęp do Nicegram w ustawieniach urządzenia → Prywatność i bezpieczeństwo → Rozpoznawanie mowy";
+
+/*Stars Purchase*/
+"StarsPurchase.GetStars" = "Zdobądź gwiazdki (Wielołańcuchowe i bez KYC)";
+"StarsPurchase.GetOnFragment" = "Kup w Fragment";
+"StarsPurchase.GetOnTelegram" = "Kup w Telegram";
+
+/*Spy On Friends*/
+"SpyOnFriends.Title" = "Aktywności";
+
+/*God’s Eye*/
+"GodsEye.Title" = "God’s Eye";
+
+/*Keywords*/
+"NicegramKeywords.Title" = "✨Słowa kluczowe✨";
+"NicegramKeywords.TitleNoEmoji" = "Słowa kluczowe";
+"NicegramKeywords.Tooltip" = "Monitoruj przychodzące wiadomości pod kątem określonych słów kluczowych";
+"NicegramKeywords.TrackUpdates" = "Śledź aktualizacje \"%@\"";
+"NicegramKeywords.TrackEnabled" = "Śledzenie aktualizacji \"%@\" włączone!";
+
+/*Accounts Backup*/
+"AccountsBackup.SectionHeader" = "Konta";
+"AccountsBackup.ICloudBackupEnabled" = "Kopia zapasowa iCloud";
+"AccountsBackup.ImportFromICloud" = "Importuj z iCloud";
+"AccountsBackup.ImportFromFile" = "Importuj z pliku";
+"AccountsBackup.ExportAsFile" = "Eksportuj jako plik";
+"AccountsBackup.DeleteSessions" = "Usuń sesje";
