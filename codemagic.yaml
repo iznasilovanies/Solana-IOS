@@ -8,9 +8,9 @@ workflows:
       groups:
         - telegram_credentials
       vars:
-        XCODE_VERSION: "15.2"
+        XCODE_VERSION: "15.4"
         BUNDLE_ID: "com.nicegram.app"
-      xcode: 15.2
+      xcode: latest
     
     triggering:
       events:
