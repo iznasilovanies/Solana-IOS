@@ -1,6 +1,6 @@
 workflows:
   ios-build:
-    name: Solana iOS Build (Без подписи)
+    name: Solana iOS Build (Xcode Managed)
     instance_type: mac_mini_m2
     max_build_duration: 120
     
@@ -34,7 +34,7 @@ workflows:
             "bundle_id": "com.solana.messenger",
             "api_id": "${TELEGRAM_API_ID}",
             "api_hash": "${TELEGRAM_API_HASH}",
-            "team_id": "FAKETEAM01",
+            "team_id": "",
             "app_center_id": "",
             "is_internal_build": true,
             "is_appstore_build": false,
@@ -48,89 +48,52 @@ workflows:
           }
           EOF
           
-      - name: Установка ldid (инструмент Saurik для подписи)
+      - name: Сборка для симулятора с Xcode Managed Codesigning
+        script: |
+          # Используем Xcode Managed Codesigning - НЕ требует профилей!
+          python3 build-system/Make/Make.py \
+            --cacheDir="$HOME/bazel-cache" \
+            build \
+            --configurationPath="build-input/build-configuration.json" \
+            --xcodeManagedCodesigning \
+            --buildNumber=1 \
+            --configuration=release_sim_arm64
+
+      - name: Установка ldid и создание IPA
         script: |
           brew install ldid
+          mkdir -p output
           
-      - name: Создание фейковых профилей и entitlements
-        script: |
-          # Создаём структуру папок как ожидает BuildConfiguration.py
-          mkdir -p fake-codesigning/profiles
-          mkdir -p fake-codesigning/certs
+          # Находим собранный .app
+          APP_PATH=$(find bazel-bin -name "*.app" -type d | head -1)
           
-          # Создаём entitlements
-          cat > fake-codesigning/entitlements.plist << 'ENTITLEMENTS'
+          if [ -n "$APP_PATH" ]; then
+            echo "✅ Найден .app: $APP_PATH"
+            
+            # Копируем приложение
+            cp -R "$APP_PATH" output/Telegram.app
+            
+            # Создаём entitlements
+            cat > output/entitlements.plist << 'ENTITLEMENTS'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
           <dict>
-              <key>application-identifier</key>
-              <string>*</string>
               <key>get-task-allow</key>
               <true/>
           </dict>
           </plist>
           ENTITLEMENTS
-          
-          # Создаём фейковый provisioning profile в папке profiles
-          cat > fake-codesigning/profiles/Solana.mobileprovision << 'PROFILE'
-          <?xml version="1.0" encoding="UTF-8"?>
-          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
-              <key>AppIDName</key>
-              <string>Solana Messenger</string>
-              <key>Entitlements</key>
-              <dict>
-                  <key>aps-environment</key>
-                  <string>development</string>
-                  <key>application-identifier</key>
-                  <string>FAKETEAM01.com.solana.messenger</string>
-                  <key>get-task-allow</key>
-                  <true/>
-              </dict>
-              <key>Name</key>
-              <string>Solana Development</string>
-              <key>TeamIdentifier</key>
-              <array>
-                  <string>FAKETEAM01</string>
-              </array>
-              <key>UUID</key>
-              <string>00000000-0000-0000-0000-000000000001</string>
-          </dict>
-          </plist>
-          PROFILE
-          
-      - name: Сборка для симулятора
-        script: |
-          python3 build-system/Make/Make.py \
-            --cacheDir="$HOME/bazel-cache" \
-            build \
-            --configurationPath="build-input/build-configuration.json" \
-            --codesigningInformationPath="fake-codesigning" \
-            --buildNumber=1 \
-            --configuration=release_sim_arm64
-
-      - name: Создание IPA и подпись через ldid
-        script: |
-          mkdir -p output
-          APP_PATH=$(find bazel-bin -name "*.app" -type d | head -1)
-          
-          if [ -n "$APP_PATH" ]; then
-            echo "Найден .app: $APP_PATH"
             
-            # Копируем приложение
-            cp -R "$APP_PATH" output/Telegram.app
-            
-            # Подписываем через ldid (метод Saurik)
+            # Подписываем через ldid
             echo "Подписываем через ldid..."
-            ldid -Sfake-codesigning/entitlements.plist output/Telegram.app/Telegram
+            ldid -Soutput/entitlements.plist output/Telegram.app/Telegram
             
-            # Подписываем все фреймворки
-            find output/Telegram.app/Frameworks -name "*.framework" -type d | while read framework; do
-              binary=$(basename "$framework" .framework)
-              if [ -f "$framework/$binary" ]; then
-                ldid -S "$framework/$binary"
+            # Подписываем все фреймворки и расширения
+            find output/Telegram.app -type f -perm +111 | while read binary; do
+              if file "$binary" | grep -q "Mach-O"; then
+                echo "Подписываем: $binary"
+                ldid -S "$binary" 2>/dev/null || true
               fi
             done
             
@@ -138,14 +101,15 @@ workflows:
             cd output
             mkdir -p Payload
             mv Telegram.app Payload/
-            zip -r Solana-ldid-signed.ipa Payload
-            cp Solana-ldid-signed.ipa $CM_EXPORT_DIR/
+            zip -r Solana-Messenger.ipa Payload
+            cp Solana-Messenger.ipa $CM_EXPORT_DIR/
             
-            echo "✅ IPA создан с ldid подписью!"
-            echo "📱 Этот IPA можно установить через AltStore"
+            echo "✅ IPA создан: Solana-Messenger.ipa"
+            echo "📱 Установи через TrollStore или AltStore"
           else
             echo "❌ .app не найден"
-            find bazel-bin -name "*.app" -o -name "*.ipa" 2>/dev/null > $CM_EXPORT_DIR/search-results.txt
+            echo "Поиск артефактов..."
+            find bazel-bin -name "*.app" -o -name "*.ipa" 2>/dev/null || echo "Ничего не найдено"
           fi
           
     artifacts:
