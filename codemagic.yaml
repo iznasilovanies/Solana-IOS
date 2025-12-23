@@ -50,14 +50,15 @@ workflows:
           
       - name: Установка ldid (инструмент Saurik для подписи)
         script: |
-          # Устанавливаем ldid - инструмент от создателя Cydia
           brew install ldid
           
       - name: Создание фейковых профилей и entitlements
         script: |
-          mkdir -p fake-codesigning
+          # Создаём структуру папок как ожидает BuildConfiguration.py
+          mkdir -p fake-codesigning/profiles
+          mkdir -p fake-codesigning/certs
           
-          # Создаём entitlements для ad-hoc подписи
+          # Создаём entitlements
           cat > fake-codesigning/entitlements.plist << 'ENTITLEMENTS'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -71,8 +72,8 @@ workflows:
           </plist>
           ENTITLEMENTS
           
-          # Создаём фейковый provisioning profile
-          cat > fake-codesigning/Solana.mobileprovision << 'PROFILE'
+          # Создаём фейковый provisioning profile в папке profiles
+          cat > fake-codesigning/profiles/Solana.mobileprovision << 'PROFILE'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
