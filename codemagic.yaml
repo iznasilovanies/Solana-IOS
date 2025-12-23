@@ -1,0 +1,76 @@
+workflows:
+  ios-build:
+    name: Solana iOS Build
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    
+    environment:
+      groups:
+        - telegram_credentials
+      vars:
+        XCODE_VERSION: "15.2"
+        BUNDLE_ID: "com.nicegram.app"
+      xcode: 15.2
+    
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+    
+    scripts:
+      - name: Install dependencies
+        script: |
+          # Install Homebrew dependencies
+          brew install python@3.11 bazelisk
+          
+          # Set up Python
+          export PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
+          
+          # Install yasm
+          brew install yasm
+          
+      - name: Configure Telegram API
+        script: |
+          # Create BuildConfig with Telegram credentials
+          mkdir -p build-input
+          cat > build-input/build-configuration.json << EOF
+          {
+            "bundle_id": "com.nicegram.app",
+            "api_id": "${TELEGRAM_API_ID}",
+            "api_hash": "${TELEGRAM_API_HASH}",
+            "team_id": "",
+            "app_center_id": "",
+            "is_internal_build": true,
+            "is_appstore_build": false,
+            "appstore_id": "",
+            "app_specific_url_scheme": "tg"
+          }
+          EOF
+          
+      - name: Build iOS App
+        script: |
+          # Build using Bazel
+          python3 build-system/Make/Make.py \
+            --cacheDir="$HOME/bazel-cache" \
+            build \
+            --configurationPath="build-input/build-configuration.json" \
+            --buildNumber=1 \
+            --configuration=release_arm64
+
+      - name: Export IPA
+        script: |
+          # Find and copy IPA to artifacts
+          find . -name "*.ipa" -exec cp {} $CM_EXPORT_DIR/ \;
+          
+    artifacts:
+      - build/artifacts/**/*.ipa
+      - $CM_EXPORT_DIR/*.ipa
+      
+    publishing:
+      scripts:
+        - name: Notify build complete
+          script: echo "Build completed successfully!"
