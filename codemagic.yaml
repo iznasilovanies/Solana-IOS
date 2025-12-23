@@ -1,6 +1,6 @@
 workflows:
   ios-build:
-    name: Solana iOS Build (Без подписи)
+    name: Solana iOS Build
     instance_type: mac_mini_m2
     max_build_duration: 120
     
@@ -8,7 +8,7 @@ workflows:
       groups:
         - telegram_credentials
       vars:
-        BUNDLE_ID: "com.nicegram.app"
+        BUNDLE_ID: "com.solana.messenger"
       xcode: latest
     
     triggering:
@@ -31,7 +31,7 @@ workflows:
           mkdir -p build-input
           cat > build-input/build-configuration.json << EOF
           {
-            "bundle_id": "com.nicegram.app",
+            "bundle_id": "com.solana.messenger",
             "api_id": "${TELEGRAM_API_ID}",
             "api_hash": "${TELEGRAM_API_HASH}",
             "team_id": "",
@@ -39,31 +39,30 @@ workflows:
             "is_internal_build": true,
             "is_appstore_build": false,
             "appstore_id": "",
-            "app_specific_url_scheme": "tg"
+            "app_specific_url_scheme": "solana"
           }
           EOF
           
-      - name: Сборка iOS без подписи
+      - name: Сборка iOS с Xcode подписью
         script: |
-          # Сборка без code signing
+          # Используем автоматическую подпись Xcode
           python3 build-system/Make/Make.py \
             --cacheDir="$HOME/bazel-cache" \
             build \
             --configurationPath="build-input/build-configuration.json" \
             --buildNumber=1 \
             --configuration=release_arm64 \
-            --disableCodeSigning
+            --xcodeManagedCodesigning
 
       - name: Создание IPA
         script: |
-          # Создаём неподписанный IPA
           mkdir -p output
           find . -name "*.app" -type d | head -1 | xargs -I {} cp -R {} output/
           cd output
-          mkdir Payload
+          mkdir -p Payload
           mv *.app Payload/ 2>/dev/null || true
-          zip -r Solana-unsigned.ipa Payload
-          cp Solana-unsigned.ipa $CM_EXPORT_DIR/
+          zip -r Solana.ipa Payload
+          cp Solana.ipa $CM_EXPORT_DIR/
           
     artifacts:
       - output/*.ipa
@@ -73,5 +72,5 @@ workflows:
       scripts:
         - name: Готово
           script: |
-            echo "✅ Неподписанный IPA готов!"
-            echo "📱 Установи через AltStore с бесплатным Apple ID"
+            echo "✅ IPA файл готов!"
+            echo "📱 Скачай и установи через AltStore"
