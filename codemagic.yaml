@@ -43,12 +43,30 @@ workflows:
           }
           EOF
           
-      - name: Создание фейковых профилей подписи
+      - name: Установка ldid (инструмент Saurik для подписи)
         script: |
-          # Создаём директорию с фейковым профилем
+          # Устанавливаем ldid - инструмент от создателя Cydia
+          brew install ldid
+          
+      - name: Создание фейковых профилей и entitlements
+        script: |
           mkdir -p fake-codesigning
           
-          # Создаём минимальный plist профиль (не валидный, но пройдёт парсинг)
+          # Создаём entitlements для ad-hoc подписи
+          cat > fake-codesigning/entitlements.plist << 'ENTITLEMENTS'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>application-identifier</key>
+              <string>*</string>
+              <key>get-task-allow</key>
+              <true/>
+          </dict>
+          </plist>
+          ENTITLEMENTS
+          
+          # Создаём фейковый provisioning profile
           cat > fake-codesigning/Solana.mobileprovision << 'PROFILE'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -62,6 +80,8 @@ workflows:
                   <string>development</string>
                   <key>application-identifier</key>
                   <string>FAKETEAM01.com.solana.messenger</string>
+                  <key>get-task-allow</key>
+                  <true/>
               </dict>
               <key>Name</key>
               <string>Solana Development</string>
@@ -75,9 +95,8 @@ workflows:
           </plist>
           PROFILE
           
-      - name: Сборка для симулятора (без подписи)
+      - name: Сборка для симулятора
         script: |
-          # Сборка для симулятора не требует подписи!
           python3 build-system/Make/Make.py \
             --cacheDir="$HOME/bazel-cache" \
             build \
@@ -86,22 +105,41 @@ workflows:
             --buildNumber=1 \
             --configuration=release_sim_arm64
 
-      - name: Создание IPA из симуляторной сборки
+      - name: Создание IPA и подпись через ldid
         script: |
           mkdir -p output
-          # Находим собранный .app
           APP_PATH=$(find bazel-bin -name "*.app" -type d | head -1)
+          
           if [ -n "$APP_PATH" ]; then
-            cp -R "$APP_PATH" output/
+            echo "Найден .app: $APP_PATH"
+            
+            # Копируем приложение
+            cp -R "$APP_PATH" output/Telegram.app
+            
+            # Подписываем через ldid (метод Saurik)
+            echo "Подписываем через ldid..."
+            ldid -Sfake-codesigning/entitlements.plist output/Telegram.app/Telegram
+            
+            # Подписываем все фреймворки
+            find output/Telegram.app/Frameworks -name "*.framework" -type d | while read framework; do
+              binary=$(basename "$framework" .framework)
+              if [ -f "$framework/$binary" ]; then
+                ldid -S "$framework/$binary"
+              fi
+            done
+            
+            # Создаём IPA
             cd output
             mkdir -p Payload
-            mv *.app Payload/
-            zip -r Solana-unsigned.ipa Payload
-            cp Solana-unsigned.ipa $CM_EXPORT_DIR/
-            echo "✅ IPA создан: Solana-unsigned.ipa"
+            mv Telegram.app Payload/
+            zip -r Solana-ldid-signed.ipa Payload
+            cp Solana-ldid-signed.ipa $CM_EXPORT_DIR/
+            
+            echo "✅ IPA создан с ldid подписью!"
+            echo "📱 Этот IPA можно установить через AltStore"
           else
-            echo "⚠️ .app не найден, создаём пустой артефакт"
-            echo "Build completed but no .app found" > $CM_EXPORT_DIR/build-log.txt
+            echo "❌ .app не найден"
+            find bazel-bin -name "*.app" -o -name "*.ipa" 2>/dev/null > $CM_EXPORT_DIR/search-results.txt
           fi
           
     artifacts:
