@@ -39,7 +39,12 @@ workflows:
             "is_internal_build": true,
             "is_appstore_build": false,
             "appstore_id": "",
-            "app_specific_url_scheme": "solana"
+            "app_specific_url_scheme": "solana",
+            "premium_iap_product_id": "org.solana.premium",
+            "enable_siri": false,
+            "enable_icloud": false,
+            "google_client_scheme": "",
+            "ng_env": "production"
           }
           EOF
           
